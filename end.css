@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #56a5eb;
+  --secondary-color: #ff7a7a;
+  --background-color: #1e3a8a;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 0.5rem var(--primary-color));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60rem;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+input[type="text"] {
+    padding: 1.5rem;
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.8rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    outline: none;
+    text-align: center; /* Menengahkan teks */
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #ffffff; /* Mengubah warna placeholder menjadi putih */
+    opacity: 0.7; /* Mengatur transparansi placeholder agar tidak terlalu mencolok */
+  }
+  
+  input[type="text"]:focus {
+    border-color: var(--primary-color);
+    background: rgba(247, 244, 244, 0.3);
+  }
+
+.btn {
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  text-decoration: none;
+  color: white;
+  background: var(--primary-color);
+  box-shadow: 0 0.5rem 2rem rgba(86, 165, 235, 0.4);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 1rem 2.5rem rgba(255, 122, 122, 0.6);
+  transform: translateY(-0.5rem);
+}
+
+#saveScoreBtn:disabled {
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+a.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  text-align: center;
+}
+
+.btn-3d {
+  box-shadow: 0 0.8rem 1.5rem var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-0.7rem);
+  box-shadow: 0 1rem 3rem var(--shadow-color);
+}

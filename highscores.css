@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #ff7a7a;
+  --background-color: #1e3a8a;
+  --highlight-color: #56a5eb;
+  --text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem;
+  width: 80%; /* Adjust width as needed */
+  max-width: 60rem;
+  background: var(--primary-color); /* Changed from gradient to solid color */
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#highScores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 12rem;
+  margin-bottom: 2rem;
+}
+
+#finalScore {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px var(--shadow-color);
+  letter-spacing: 0.5rem;
+}
+
+#highScoresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.high-score {
+  font-size: 2.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 1.2rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.high-score:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.high-score span {
+  font-weight: 600;
+  color: var(--highlight-color);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: white;
+  background: var(--secondary-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 2rem rgba(255, 122, 122, 0.4);
+}
+
+.btn:hover {
+  background: var(--highlight-color);
+  box-shadow: 0 1rem 3rem rgba(86, 165, 235, 0.6);
+  transform: translateY(-0.5rem);
+}

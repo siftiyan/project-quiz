@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #56a5eb;
+  --secondary-color: #ff7a7a;
+  --background-color: #1e3a8a; /* Background color */
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Menyebar elemen secara vertikal */
+  align-items: center;
+  background: var(--background-color);
+  padding: 3rem 0; /* Tambahkan padding agar tidak terlalu mepet dengan tepi layar */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem; /* Beri jarak antara header dan konten berikutnya */
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 0.5rem var(--primary-color));
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem; /* Beri jarak antara logo dan heading */
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+.content {
+  text-align: center;
+  max-width: 60rem;
+  margin-bottom: 5rem; /* Beri jarak antara deskripsi dan tombol */
+}
+
+.description {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px var(--shadow-color);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Jarak antara tombol lebih besar */
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  width: 20rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: none;
+  text-decoration: none;
+  color: white;
+  background: var(--primary-color);
+  box-shadow: 0 0.5rem 2rem rgba(86, 165, 235, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 1rem 2.5rem rgba(255, 122, 122, 0.6);
+  transform: translateY(-0.5rem);
+}
+
+.btn-3d {
+  box-shadow: 0 0.8rem 1.5rem var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-0.7rem);
+  box-shadow: 0 1rem 3rem var(--shadow-color);
+}
